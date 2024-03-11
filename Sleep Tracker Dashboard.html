@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sleep Tracker Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background-image: url("C:/Users/shara/github-classroom/BrunelCS/cs2001-2023-24-group_1/cs2001-2023-24-group_1/wp3010166.jpg"); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+    }
+    /* Styles for navigation bar */
+    .navbar {
+      background-color: #14141400;
+      overflow: hidden;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .header-right {
+      float: right;
+      margin: 20px;
+    }
+    .login-button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(142, 179, 218, 0.8); /* Semi-transparent white background */
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #333;
+    }
+    .functions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .function-box {
+      width: 40%;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f7e2ef;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(20, 19, 19, 0.2);
+      text-align: center;
+    }
+    .function-box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .function-box p {
+      color: #555;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #20276f;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="timer_and_alarm.html">Timer & Alarm</a>
+    <a href="sleep_records.html">Sleep Records</a>
+    <div class="header-right">
+      <a href="C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\Login1.html" class="login-button">Login/Register</a>
+      <script src="C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\script.js"></script>
+
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Sleep Tracker Dashboard</h1>
+    <div class="functions">
+      <!-- Music Button -->
+      <div class="function-box">
+        <h2>Music</h2>
+        <p>Play relaxing sleep music.</p>
+        <a href="C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\Music1.html" class="button">Play Music</a>
+      </div>
+      
+      <!-- Sleep Records Button -->
+      <div class="function-box">
+        <h2>Sleep Records</h2>
+        <p>Track your sleep patterns.</p>
+        <a href="C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\Sleep and Alarm Records Page.html" class="button">View Records</a>
+      </div>
+
+      <!-- Information Button -->
+      <div class="function-box">
+        <h2>Information</h2>
+        <p>Tips for better sleep.</p>
+        <a href="C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\Information page.html" class="button">Get Info</a>
+      </div>
+
+      <!-- Sleep Timer Button -->
+      <div class="function-box">
+        <h2>Timer</h2>
+        <p>Set a sleep timer.</p>
+        <a href= "C:\Users\Shara\github-classroom\BrunelCS\cs2001-2023-24-group_1\cs2001-2023-24-group_1\Timer and Alarm Page.html" class="button">Set Timer</a>
+      </div>
+
+      <!-- Personalized Suggestions Button -->
+      <div class="function-box">
+        <h2>Suggestions</h2>
+        <p>Personalized sleep suggestions.</p>
+        <a href="#" class="button">Get Suggestions</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Script from the second code snippet -->
+  <script>
+    function playMusic() {
+      alert('Playing soothing sleep music...');
+      // Add logic to play music here
+    }
+
+    function viewSleepRecords() {
+      alert('Viewing sleep records...');
+      // Add logic to view sleep records here
+    }
+
+    function getInformation() {
+      alert('Fetching tips for better sleep...');
+      // Add logic to fetch information here
+    }
+
+    function setSleepTimer() {
+      alert('Setting sleep timer...');
+      // Add logic to set sleep timer here
+    }
+
+    function getSuggestions() {
+      alert('Fetching personalized sleep suggestions...');
+      // Add logic to get suggestions here
+    }
+  </script>
+</body>
+</html>

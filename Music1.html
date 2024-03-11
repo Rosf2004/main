@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-image: url("C:/Users/kruna/OneDrive - Brunel University London/Desktop/group project 1/New folder/kl (1).jpg");
+            color: white;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #1DB954;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header input[type="search"] {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+        }
+
+        .song-list-container {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .song-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .song-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .song-list li:hover {
+            background-color: #282828;
+        }
+
+        .now-playing {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #181818;
+        }
+
+        .now-playing img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        audio {
+            margin-left: auto;
+        }
+
+        .mute-toggle {
+            position: fixed;
+            right: 260px;
+            top: 20px;
+            cursor: pointer;
+            background-color: #2b613e;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>Discover Music</h1>
+        <input type="search" placeholder="Search for songs, artists..." id="search">
+    </header>
+    
+    <div class="song-list-container">
+        <ul id="songList" class="song-list"></ul>
+    </div>
+
+    <div class="now-playing" id="nowPlaying">
+        <img src="" alt="Now Playing" id="nowPlayingCover">
+        <div>
+            <p class="song-name" id="nowPlayingName">Song Name</p>
+            <p class="song-artist" id="nowPlayingArtist">Artist Name</p>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+    
+    <button class="mute-toggle" onclick="toggleBackgroundMusic()">Play Background Music</button>
+    <audio id="backgroundMusic" src="background.mp3" loop muted></audio>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const songs = [
+        { src: 'song1.mp3', name: 'Song 1', artist: 'Artist 1', cover: 'cover1.jpg' },
+        { src: 'song2.mp3', name: 'Song 2', artist: 'Artist 2', cover: 'cover2.jpg' },
+        { src: 'song3.mp3', name: 'Song 3', artist: 'Artist 3', cover: 'cover3.jpg' }
+    ];
+
+    const songList = document.getElementById('songList');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const nowPlayingName = document.getElementById('nowPlayingName');
+    const nowPlayingArtist = document.getElementById('nowPlayingArtist');
+    const nowPlayingCover = document.getElementById('nowPlayingCover');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    songs.forEach((song, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<div>${song.name} - ${song.artist}</div>`;
+        li.onclick = function() {
+            audioPlayer.src = song.src;
+            nowPlayingName.textContent = song.name;
+            nowPlayingArtist.textContent = song.artist;
+            nowPlayingCover.src = song.cover;
+            audioPlayer.play();
+        };
+        songList.appendChild(li);
+    });
+
+    window.toggleBackgroundMusic = function() {
+        if (backgroundMusic.muted) {
+            backgroundMusic.muted = false;
+            backgroundMusic.play();
+            document.querySelector('.mute-toggle').textContent = 'Mute Background Music';
+        } else {
+            backgroundMusic.muted = true;
+            document.querySelector('.mute-toggle').textContent = 'Play Background Music';
+        }
+    };
+
+    // Optionally, play the background music automatically in muted state
+    // backgroundMusic.play();
+});
+</script>
+</body>
+</html>
