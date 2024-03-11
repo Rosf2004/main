@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Sleep Tips</title>
+    <style>
+        p {
+            color: white;
+            line-height: 1.6;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Updated background color */
+            color: white;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white; /* Updated title color */
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #sleep-info h2,
+        #sleep-tips h2 {
+            color: #4CAF50; /* Green color code */
+        }
+
+        #sleep-tips ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sleep-tips li {
+            background-color: #a395f801;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #more-tips {
+            display: none;
+        }
+
+        #tips-info {
+            display: none;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #tips-info h2 {
+            color: #4CAF50;
+        }
+
+        #tips-info ul {
+            padding: 0;
+        }
+
+        #tips-info li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Healthy Sleep Guide</h1>
+    </header>
+    <main>
+        <section id="sleep-info">
+            <h2>What is Healthy Sleep?</h2>
+            <p>Healthy sleep is a critical component of physical and mental health. It involves getting adequate, quality sleep on a regular basis. Lack of proper sleep can lead to various health issues such as fatigue, mood swings, and impaired cognitive function.</p>
+        </section>
+        <section id="sleep-tips">
+            <h2>Tips for Better Sleep</h2>
+            <ul>
+                <li>Stick to a sleep schedule: Go to bed and wake up at the same time every day, even on weekends.</li>
+                <li>Pay attention to what you eat and drink: Avoid heavy meals, caffeine, and alcohol close to bedtime.</li>
+                <li>Create a restful environment: Keep your bedroom cool, dark, and quiet.</li>
+                <li>Limit daytime naps: If you need to nap, keep it short (around 20-30 minutes) and avoid napping too close to bedtime.</li>
+                <li>Include physical activity in your daily routine: Regular exercise can promote better sleep, but avoid vigorous exercise close to bedtime.</li>
+                <li>Manage stress: Practice relaxation techniques such as deep breathing, meditation, or yoga to reduce stress and promote better sleep.</li>
+                <li>Unplug before bedtime: Reduce screen time and create a relaxing bedtime routine.</li>
+                <div id="more-tips">
+                </div>
+            </ul>
+            <button id="show-more">Show More Tips</button>
+        </section>
+
+        <!-- Tips and Tricks Information Page -->
+        <section id="tips-info">
+            <h2>Tips and Tricks for Quality Sleep</h2>
+            <p>Explore our tips and tricks to improve your sleep quality and overall well-being.</p>
+            <ul>
+                <li>Ensure your sleep environment is cool, dark, and quiet.</li>
+                <li>Invest in a comfortable mattress and pillows.</li>
+                <li>Practice relaxation techniques before bedtime, such as deep breathing or meditation.</li>
+                <li>Limit screen time before bedtime: The blue light emitted by screens can interfere with your sleep-wake cycle.</li>
+                <li>Stay hydrated: But avoid excessive fluids close to bedtime to minimize nighttime trips to the bathroom.</li>
+                <li>Establish a bedtime routine: Engage in calming activities before bed, such as reading a book or taking a warm bath.</li>
+                <li>Consider sleep supplements cautiously: Consult with a healthcare professional before using any sleep aids or supplements.</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        document.getElementById('show-more').addEventListener('click', function() {
+            var moreTips = document.getElementById('more-tips');
+            if (moreTips.style.display === 'none') {
+                moreTips.style.display = 'block';
+                this.textContent = 'Show Less Tips';
+            } else {
+                moreTips.style.display = 'none';
+                this.textContent = 'Show More Tips';
+            }
+        });
+
+        // Show Tips and Tricks Information Page
+        document.getElementById('show-more').addEventListener('click', function() {
+            var tipsInfo = document.getElementById('tips-info');
+            if (tipsInfo.style.display === 'none') {
+                tipsInfo.style.display = 'block';
+            } else {
+                tipsInfo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
